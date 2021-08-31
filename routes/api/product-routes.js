@@ -19,17 +19,15 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
-  // console.log(`req params:  `, req.params.id)
+  console.log(`req params:  `, req.params)
+  console.log(`req params product_id:  `, req.params.product_id);
+  console.log(`req params id:  `, req.params.id)
   try {
     const productData = await Product.findByPk(req.params.id, {
       // JOIN with travellers, using the Trip through table
       include: [{
-        model: 'Category',
-        through: 'category_id'
-      },
-      {
-        model: 'Tag',
-        through: 'productTag'
+        model: Category
+        // through: category_id
       }]
     });
 
