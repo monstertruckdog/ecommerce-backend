@@ -3,3 +3,4 @@ package-lock.json
 node_modules
 .env
 README_instructions.md
+assets/readme_assets/captures_raw/
