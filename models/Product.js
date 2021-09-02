@@ -34,12 +34,19 @@ Product.init(
         isNumeric: true
       }
     },
+    // category_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'category',
+    //     key: 'product_id'
+    //   }
+    // }
     category_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'product_id'
-      }
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'category',
+          key: 'category_id'
+        }
     }
   },
   {
