@@ -68,7 +68,7 @@ In this exercise students will design a demonstration ecommerce backend using th
       ```JSON
       {
 			  "product_id": 1,
-              "product_name": "Plain T-Shirt",
+                "product_name": "Plain T-Shirt",
 			  "price": 14.99,
 			  "stock": 14,
 			  "category_id": 1,
@@ -82,7 +82,7 @@ In this exercise students will design a demonstration ecommerce backend using th
       ```JSON
       {
 			  "category_id": 41,
-              "category_name": "board games"
+                "category_name": "board games"
       }
 		```
     * **TAGS**:  `http://localhost:3001/api/tags`
@@ -104,7 +104,7 @@ In this exercise students will design a demonstration ecommerce backend using th
     ```JSON
             {
 			        "product_id": 84,
-                    "product_name": "Oxford Dress Shirt",
+                      "product_name": "Oxford Dress Shirt",
 			        "price": 59.99,
 			        "stock": 4,
 			        "category_id": 1,
