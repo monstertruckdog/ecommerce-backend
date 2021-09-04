@@ -48,7 +48,7 @@ In this exercise students will design a demonstration ecommerce backend using th
 6. Download and open one of the widely used API testing clients [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/)
 7. Execute GET, POST, PUT and DELETE methods as desired:
 
-      ### GET
+   ### GET
   
    * **PRODUCTS**:  `http://localhost:3001/api/products`
    * **CATEGORIES**:  `http://localhost:3001/api/categories`
@@ -68,7 +68,7 @@ In this exercise students will design a demonstration ecommerce backend using th
       ```JSON
       {
 			  "product_id": 1,
-            "product_name": "Plain T-Shirt",
+              "product_name": "Plain T-Shirt",
 			  "price": 14.99,
 			  "stock": 14,
 			  "category_id": 1,
@@ -82,7 +82,7 @@ In this exercise students will design a demonstration ecommerce backend using th
       ```JSON
       {
 			  "category_id": 41,
-            "category_name": "board games"
+              "category_name": "board games"
       }
 		```
     * **TAGS**:  `http://localhost:3001/api/tags`
@@ -92,7 +92,7 @@ In this exercise students will design a demonstration ecommerce backend using th
       ```JSON
       {
 			  "tag_id": 16,
-            "tag_name": "art"
+              "tag_name": "art"
       }
 		```
 
@@ -135,9 +135,9 @@ In this exercise students will design a demonstration ecommerce backend using th
 
     ### DELETE
 
-    * **PRODUCT**:  `http://localhost:3001/api/products/<product ID value to be deleted`
-    * **CATEGORY**:  `http://localhost:3001/api/categories/<category ID value to be deleted`
-    * **TAG**:  `http://localhost:3001/api/tags/<tag ID value to be deleted`
+    * **PRODUCT**:  `http://localhost:3001/api/products/<product ID value to be deleted>`
+    * **CATEGORY**:  `http://localhost:3001/api/categories/<category ID value to be deleted>`
+    * **TAG**:  `http://localhost:3001/api/tags/<tag ID value to be deleted>`
 
 ## Usage
 
