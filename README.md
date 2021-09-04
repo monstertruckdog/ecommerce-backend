@@ -51,3 +51,8 @@ In this exercise students will design a demonstration ecommerce backend using th
 
 * **GET by ID:  categories**
   ![07_ecommerce-backend_GET-id-categories](./assets/readme_assets/07_ecommerce-backend_GET-id-categories.gif)
+  
+##### POST methods
+
+* **POST by ID:  products**
+    ![

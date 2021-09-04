@@ -8,7 +8,13 @@ router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   try {
-    const productData = await Product.findAll();
+    const productData = await Product.findAll({
+      include: [
+        {model: Category},
+        {model: Tag,
+        through: ProductTag}
+      ]
+    });
     res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
@@ -26,7 +32,11 @@ router.get('/:id', async (req, res) => {
       include: [{
         model: Category
         // through: category_id
-      }]
+      },
+      {
+        model: Tag
+      }
+    ]
     });
 
     if (!productData) {
@@ -54,9 +64,10 @@ router.post('/', (req, res) => {
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
+        // console.log(`PRODUCT_ID.PRODUCT_ID:  `, product_id.product_id)
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
-            product_id: product.id,
+            product_id: product.product_id,
             tag_id,
           };
         });
@@ -127,7 +138,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(productData);
+    res.status(200).json({ message:  `Product ID ${req.params.id} was successfully deleted!`});
   } catch (err) {
     res.status(500).json(err);
   }
